@@ -54,8 +54,7 @@ class GraphException(Exception):
     def __str__(self):
         return repr(self.value)
 
-class Atoms:
-    ## Atoms are a basic hypergraph
+class Hypergraph:
     def __init__(self):
         self.next_edge_id = 0
         self.nodes = {}

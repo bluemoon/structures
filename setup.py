@@ -2,17 +2,25 @@ from setuptools import setup, find_packages
 import os
 import sys
 
-VERSION = "0.0.1"
+VERSION = "0.0.1b"
 setup(
-    name = "structures",
+    name = "bm_structures",
     version = VERSION,
-    packages = find_packages('src'),
-    package_dir = {'':'src'},
+    packages = [
+    'bm_structures',
+    'bm_structures.finite_automaton',
+    'bm_structures.proxy',
+    'bm_structures.singleton',
+    'bm_structures.trees'
+    ],
+    
+    package_dir = {'bm_structures' : 'src'},
     zip_safe=False,
     include_package_data=True,
     license='GPL',
     author='Alex Toney',
     author_email='toneyalex@gmail.com',
+    description='Common structures for python',
     test_suite="nose.collector",
     tests_require="nose",
 )
